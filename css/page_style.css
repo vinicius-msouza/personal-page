@@ -1,0 +1,304 @@
+/* reset de estilo do CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inicio da configuração de estilo*/
+body {
+    background-image: url('../images/background.jpg');
+    background-size: 100vw auto;
+    font-size: 8px;
+    text-decoration: none;
+}
+
+/* dimensões para iphone 6 / 7 */
+@media (min-width: 375px) {
+    body {
+        font-size: 10px;
+    }
+
+    .menu a {
+        font-size: 2em;
+    }
+}
+
+/* breakpoint */
+@media (min-width: 500px) {
+    body {
+        font-size: 16px;
+    }    }
+}
+
+/* breakpoint */
+@media (min-width: 1000px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1500px) {
+    body {
+        font-size: 22px;
+    }
+}
+
+/* Inicios dos estilos da pagina inicial */
+header {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.menu {
+    background-color: #031021;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a {
+    color: #A7C6D9;
+    display: block;
+    font-size: 1.4em;
+    font-family: 'Bebas Neue', cursive;
+    padding: .5em 1.3em;
+    text-decoration: none;
+    transition: background-color 600ms, color 600ms;
+}
+
+.menu a:active,
+.menu a:hover {
+    background-color: #102540;
+    color: #F2F2F2;
+}
+
+.menu .home {
+    transition: transform 500ms;
+}
+
+.menu .home:hover {
+    transform: scale(1.2);
+}
+
+.page-title,
+.page-subtitle {
+    text-align: center;
+    color: #F2F2F2;
+}
+
+.page-title {
+    font-size: 3.8em;
+    font-family: 'Staatliches', cursive;
+}
+
+.page-title {
+    opacity: 0;
+    animation: 1s ease-in 1s textFade forwards;
+}
+
+@keyframes textFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.page-subtitle {
+    font-size: 1.5em;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* Início dos estilos da página sobre */
+.contato,
+.sobre {
+    padding: 1.5em;
+    min-height: 95vh;
+}
+
+.sobre .grid {
+    display: grid;
+    gap: 1.5em;
+}
+
+@media (min-width: 320px) {
+    .sobre figure {
+        text-align: center;
+    }
+
+    .sobre .img-about {
+        width: 50vw;
+        height: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    .sobre .img-about {
+        width: 25vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center bottom;
+    }
+    .sobre .grid {
+        grid-template-columns: 30vw 60vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre p {
+        font-size: .5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .sobre .img-about {
+        width: 25vw;
+        height: 60vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    .sobre .grid {
+        grid-template-columns: 30vw 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sobre .img-about {
+        width: 25vw;
+        height: 70vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    .sobre .grid {
+        grid-template-columns: 30vw 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sobre .img-about {
+        width: 25vw;
+        height: 60vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    .sobre .grid {
+        grid-template-columns: 30vw 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contato h2,
+.sobre h2 {
+    color: #F2F2F2;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.8em;
+    padding-bottom: 1em;
+}
+
+.contato h3,
+.sobre h3,
+.sobre p {
+    color: #F2F2F2;
+    text-align: justify ;
+}
+
+.sobre h3 {
+    font-size: 1.8em;
+    font-family: 'Kelly Slab', cursive;
+}
+
+.contato h3,
+.sobre p {
+    font-size: 1.2em;
+    font-family: 'Inconsolata', monospace;
+}
+
+.img-about {
+    width: 24vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Inicio dos estilos da página de contato*/
+.contato h3 {
+    padding-bottom: 2em;
+}
+
+.contato a {
+    color: #F2F2F2;
+    font-size: 6em;
+    text-decoration: none;
+    text-align: center;
+    transition: text-shadow 400ms;
+}
+
+.contato a:active,
+.contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px #6495ED;
+}
+
+.contato .icons {
+    display: grid;
+    gap: 3em;
+}
+
+@media (min-width: 220px) {
+    .contato .icons {
+        grid-template-columns: 8em 8em;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .contato .icons {
+        grid-template-columns: repeat(4, 6em);
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+}
+
+@media (min-width: 800px) {
+    .contato .icons {
+        grid-template-columns: repeat(4, 8em);
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+}
+
+@media (min-width: 1500px) {
+    .contato a {
+        font-size: 8em;
+    }
+    
+    .contato .icons {
+        grid-template-columns: repeat(4, 12em);
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+    }
+}
